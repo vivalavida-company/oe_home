@@ -2,9 +2,14 @@
 
 @import url(./base.css);
 
+/* ---------------레이아웃 시작------------------------ */
 
 .ly_eventMain {padding: 70px 0 50px; }
 
+
+/* //////////////////레아아웃 끝////////////////// */
+
+/* ---------------모듈 시작------------------------ */
 .bl_card {text-align: center; margin-bottom: 50px;}
 .bl_card:last-child {margin-bottom: 0;}
 .bl_card_imgWrapper img {width: 100%;}
@@ -16,8 +21,18 @@
 .bl_card_txt.bl_card_txtLeft p {text-align: start;}
 .bl_card_txt .ic_dot_darkGreen {display: inline-block; height: 6px; width: 6px; position: relative; bottom: 3px; margin-right: 4px;}
 
+/* ///////모듈 끝/////// */
+
+/* ---------------엘리먼트 시작------------------------ */
 
 .el_imgCover_wrapper img {width: 100%; object-position: center; object-fit: cover;}
+
+.el_lineBtn_h56 {height: 56px; font-size: 1em; background: #fff; padding: 0 12px; display: flex; justify-content: center; align-items: center; border: 1px solid #000;}
+.el_lineBtn_h56 a {content: ''; display: inline-block;  margin-left: 6px; width: 16px; height: 16px;}
+
+/* //////////엘리먼트 끝////////// */
+
+/* ---------------헬퍼클래스 시작------------------------ */
 
 
 .hp_f20 {font-size: 20px;}
@@ -28,12 +43,38 @@
 .hp_mb12 {margin-bottom: 12px;}
 .hp_mb50 {margin-bottom: 50px;}
 .hp_bgLight {background-color: #f7f7fb;}
-
-
+.hp_relative {position: relative;}
+.hp_absolBottom {position: absolute; bottom: 0;}
+.hp_w100v {width: 100vw;}
 .hp_boxShadowY10 {box-shadow: 0 10px 10px rgba(0,0,0,0.1);}
 
+/* /////////헬퍼클래스 끝///////////// */
+
+/* ---------------유니크클래스 시작------------------------ */
+
+
+/* //////////유니크 클래스 끝////////// */
+
+.un_cont {width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.un_cont h1 {font-size: 36px; line-height: 48px;}
+.un_cont_li a {display: inline-block; padding: 30px; background-color: #25A765; border: 1px solid #25A765; border-radius: 10px; color: #fff; margin: 30px; transition-duration: 0.4s;}
+.un_cont_li a:hover {background-color: #fff; color: #25A765; border: 1px solid #25A765;}
+
+/* ---------------아이콘 셋 시작------------------------ */
 
 
 .ic_dot_darkGreen {background: url(../images/ic_dot_darkGreen.svg) center / cover;}
+.ic_spread_down {background: url(../images/ic_spread_down.svg) center / cover;}
+.ic_spread_up {background: url(../images/ic_spread_up.svg) center / cover;}
+
+/* /////////아이콘 셋 끝///////////// */
+
+
+/* ---------------자바스크립트 조절클래스 시작------------------------ */
+
+
+.js_hToggle {height: 80px; overflow: hidden;}
+
+/* /////////자바스크립트 조절클래스 끝///////////// */
 
 
