@@ -154,7 +154,7 @@
 @media screen and (max-width: 1180px) {
 
     .ly_header {height: auto; overflow: hidden;}
-    .ly_baseCenter {width: 100vw; overflow: hidden;}
+    .ly_baseCenter {width: 100vw; overflow: hidden; text-align: center;}
     .ly_header_inner {width: 100vw; height: auto;}
     .ly_footer_inner {width: 100vw; padding: 30px 30px; flex-direction: column; margin-bottom: 56px;}
 
@@ -200,7 +200,7 @@
 
     .vp_mbAuto {margin: calc(8.54vw + -30.73px) 0;}
     .vp_logoSize {width : calc(4.15vw + 37.07px)}
-    .vp_ToggleBlind {display: flex;}
+    .vp_ToggleBlind {display: flex; justify-content: center;}
     .vp_mtAuto {margin-top: calc(1.46vw + 18.73px);}
     .vp_contPad {padding: calc(6.10vw + 48.05px) 0 calc(3.66vw + 36.83px);}
     .vp_padBottom_none {padding-bottom: 0;}

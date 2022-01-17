@@ -37,7 +37,7 @@ window.addEventListener('scroll', function() {
     let footer = document.querySelector('.js_footer')
     let footerPosition = window.scrollY + footer.getBoundingClientRect().top;
 
-    if (window.scrollY+300 >= smGroupPosition && window.scrollY < quickGrupPosition -300) {
+    if (window.scrollY < quickGrupPosition -100) {
 
         
         for (var j = 0; j < navItem.length; j++) {
@@ -45,21 +45,21 @@ window.addEventListener('scroll', function() {
         }
         smGroup.classList.add('on');
 
-    } else if (window.scrollY+300 >= quickGrupPosition && window.scrollY < contentsPosition -300) {
+    } else if (window.scrollY+100 >= quickGrupPosition && window.scrollY < contentsPosition -100) {
 
         for (var j = 0; j < navItem.length; j++) {
             navItem[j].classList.remove('on')
         }
         quickGrup.classList.add('on');
 
-    } else if (window.scrollY+300 >= contentsPosition && window.scrollY < cummunityPosition -300) {
+    } else if (window.scrollY+100 >= contentsPosition && window.scrollY < cummunityPosition -100) {
 
         for (var j = 0; j < navItem.length; j++) {
             navItem[j].classList.remove('on')
         }
         contents.classList.add('on');
 
-    } else if (window.scrollY+300 >= cummunityPosition && window.scrollY < footerPosition -300 ) {
+    } else if (window.scrollY+100 >= cummunityPosition) {
 
 
         for (var j = 0; j < navItem.length; j++) {
