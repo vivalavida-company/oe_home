@@ -5,8 +5,7 @@
 
 const gnb = document.querySelector('.js_nav');
 
-var gnbPosition = window.scrollY + gnb.getBoundingClientRect().top;
-
+var gnbPosition = window.pageYOffset + gnb.getBoundingClientRect().top;
 var navLine = document.querySelector('.bl_nav_bbLine');
 
 window.addEventListener('scroll', function() {
