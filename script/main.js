@@ -5,10 +5,11 @@
 
 const gnb = document.querySelector('.js_nav');
 
-var gnbPosition = window.pageYOffset + gnb.getBoundingClientRect().top;
 var navLine = document.querySelector('.bl_nav_bbLine');
 
 window.addEventListener('scroll', function() {
+
+    var gnbPosition = window.pageYOffset + gnb.getBoundingClientRect().top;
             
     const dummyNav = document.querySelector('.js_dummyNav');
 
@@ -47,7 +48,7 @@ window.addEventListener('scroll', function() {
         }
         contents.classList.add('on');
 
-    } else if (window.scrollY+300 >= cummunityPosition && window.scrollY < footerPosition -300 ) {
+    } else if (window.scrollY+300 >= cummunityPosition && window.scrollY < footerPosition ) {
 
         for (var j = 0; j < navItem.length; j++) {
             navItem[j].classList.remove('on')
