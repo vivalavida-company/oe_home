@@ -4,13 +4,15 @@
 // 스크롤시 메뉴 고정
 
 const gnb = document.querySelector('.js_nav');
+let gnbPosition;
 
 var navLine = document.querySelector('.bl_nav_bbLine');
 
 window.addEventListener('scroll', function() {
+    if(!gnbPosition){
+        gnbPosition = window.pageYOffset + gnb.getBoundingClientRect().top;
+    }
 
-    var gnbPosition = window.pageYOffset + gnb.getBoundingClientRect().top;
-            
     const dummyNav = document.querySelector('.js_dummyNav');
 
     if (window.pageYOffset > gnbPosition) {
@@ -27,7 +29,16 @@ window.addEventListener('scroll', function() {
 
     // 스크롤할때 각 컨텐츠 위치에 가면 메뉴 활성화
 
+    let smGroupPosition = window.scrollY + smGroup_cont.getBoundingClientRect().top;
+    let quickGrupPosition = window.scrollY + quickGrup_cont.getBoundingClientRect().top;
+    let contentsPosition = window.scrollY + contents_cont.getBoundingClientRect().top;
+    let cummunityPosition = window.scrollY + cummunity_cont.getBoundingClientRect().top;
+
+    let footer = document.querySelector('.js_footer')
+    let footerPosition = window.scrollY + footer.getBoundingClientRect().top;
+
     if (window.scrollY+300 >= smGroupPosition && window.scrollY < quickGrupPosition -300) {
+
         
         for (var j = 0; j < navItem.length; j++) {
             navItem[j].classList.remove('on')
@@ -48,7 +59,8 @@ window.addEventListener('scroll', function() {
         }
         contents.classList.add('on');
 
-    } else if (window.scrollY+300 >= cummunityPosition && window.scrollY < footerPosition ) {
+    } else if (window.scrollY+300 >= cummunityPosition && window.scrollY < footerPosition -300 ) {
+
 
         for (var j = 0; j < navItem.length; j++) {
             navItem[j].classList.remove('on')
@@ -60,8 +72,6 @@ window.addEventListener('scroll', function() {
             navItem[j].classList.remove('on')
         }
     }
-
-
 
 })
 
@@ -96,7 +106,6 @@ smGroup.addEventListener('click', function () {
 
 quickGrup.addEventListener('click', function () {
 
-    
     if (window.innerWidth > 1180 ) {
         quickGrup_cont.scrollIntoView({ behavior: 'smooth' , block:"center", inline: "center" })
     } else {
@@ -118,7 +127,7 @@ contents.addEventListener('click', function () {
 
 cummunity.addEventListener('click', function () {
 
-    
+
     if (window.innerWidth > 1180 ) {
         cummunity_cont.scrollIntoView({ behavior: 'smooth' , block:"center", inline: "center" })
     } else {
@@ -126,18 +135,6 @@ cummunity.addEventListener('click', function () {
     }
 
 })
-
-// for (var i = 0; i < navItem.length; i++) {
-//     // 변수번째의 아이템 클릭시
-//     navItem[i].addEventListener('click', function () {
-//         // 모든 아이템에 하나씩 돌면서 .on 제거
-//         for (var j = 0; j < navItem.length; j++) {
-//             navItem[j].classList.remove('on')
-//         }
-//         this.classList.add('on')
-//     })
-// }
-
 
 
 // 창 크기에 따라 이지 변경
@@ -150,14 +147,4 @@ if (window.innerWidth < 1180) {
 
 
 
-// 창 스크롤시, 메뉴 활성화
-
-var footer = document.querySelector('.js_footer')
-
-var smGroupPosition = window.scrollY + smGroup_cont.getBoundingClientRect().top;
-var quickGrupPosition = window.scrollY + quickGrup_cont.getBoundingClientRect().top;
-var contentsPosition = window.scrollY + contents_cont.getBoundingClientRect().top;
-var cummunityPosition = window.scrollY + cummunity_cont.getBoundingClientRect().top;
-
-var footerPosition = window.scrollY + footer.getBoundingClientRect().top;
 
