@@ -4,9 +4,8 @@
 // 스크롤시 메뉴 고정
 
 const gnb = document.querySelector('.js_nav');
-const gnbFixed = document.querySelector('.js_navFixed');
 
-var gnbPosition = window.scrollY + gnbFixed.getBoundingClientRect().top;
+var gnbPosition = window.scrollY + gnb.getBoundingClientRect().top;
 
 var navLine = document.querySelector('.bl_nav_bbLine');
 
@@ -26,14 +25,45 @@ window.addEventListener('scroll', function() {
     }
 
 
+    // 스크롤할때 각 컨텐츠 위치에 가면 메뉴 활성화
+
+    if (window.scrollY+300 >= smGroupPosition && window.scrollY < quickGrupPosition -300) {
+        
+        for (var j = 0; j < navItem.length; j++) {
+            navItem[j].classList.remove('on')
+        }
+        smGroup.classList.add('on');
+
+    } else if (window.scrollY+300 >= quickGrupPosition && window.scrollY < contentsPosition -300) {
+
+        for (var j = 0; j < navItem.length; j++) {
+            navItem[j].classList.remove('on')
+        }
+        quickGrup.classList.add('on');
+
+    } else if (window.scrollY+300 >= contentsPosition && window.scrollY < cummunityPosition -300) {
+
+        for (var j = 0; j < navItem.length; j++) {
+            navItem[j].classList.remove('on')
+        }
+        contents.classList.add('on');
+
+    } else if (window.scrollY+300 >= cummunityPosition && window.scrollY < footerPosition -300 ) {
+
+        for (var j = 0; j < navItem.length; j++) {
+            navItem[j].classList.remove('on')
+        }
+        cummunity.classList.add('on');
+
+    } else {
+        for (var j = 0; j < navItem.length; j++) {
+            navItem[j].classList.remove('on')
+        }
+    }
+
+
 
 })
-
-
-
-
-// 스크롤할때 각 컨텐츠 위치에 가면 메뉴 활성화
-
 
 
 // 메뉴 클릭시 스크롤 애니메이션 이동
@@ -131,41 +161,3 @@ var cummunityPosition = window.scrollY + cummunity_cont.getBoundingClientRect().
 
 var footerPosition = window.scrollY + footer.getBoundingClientRect().top;
 
-
-window.addEventListener('scroll', function() {
-
-    if (window.scrollY+300 >= smGroupPosition && window.scrollY < quickGrupPosition -300) {
-        
-        for (var j = 0; j < navItem.length; j++) {
-            navItem[j].classList.remove('on')
-        }
-        smGroup.classList.add('on');
-
-    } else if (window.scrollY+300 >= quickGrupPosition && window.scrollY < contentsPosition -300) {
-
-        for (var j = 0; j < navItem.length; j++) {
-            navItem[j].classList.remove('on')
-        }
-        quickGrup.classList.add('on');
-
-    } else if (window.scrollY+300 >= contentsPosition && window.scrollY < cummunityPosition -300) {
-
-        for (var j = 0; j < navItem.length; j++) {
-            navItem[j].classList.remove('on')
-        }
-        contents.classList.add('on');
-
-    } else if (window.scrollY+300 >= cummunityPosition && window.scrollY < footerPosition -300 ) {
-
-        for (var j = 0; j < navItem.length; j++) {
-            navItem[j].classList.remove('on')
-        }
-        cummunity.classList.add('on');
-
-    } else {
-        for (var j = 0; j < navItem.length; j++) {
-            navItem[j].classList.remove('on')
-        }
-    }
-
-})
