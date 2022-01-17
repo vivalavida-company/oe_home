@@ -12,7 +12,7 @@ window.addEventListener('scroll', function() {
             
     const dummyNav = document.querySelector('.js_dummyNav');
 
-    if (window.scrollY > gnbPosition) {
+    if (window.pageYOffset > gnbPosition) {
         gnb.classList.add('js_fixedNav');
         dummyNav.classList.remove('blind');
         navLine.style.display = 'none';
