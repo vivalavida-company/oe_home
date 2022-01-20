@@ -45,21 +45,21 @@ window.addEventListener('scroll', function() {
         }
         smGroup.classList.add('on');
 
-    } else if (window.scrollY+100 >= quickGrupPosition && window.scrollY < contentsPosition -100) {
+    } else if (window.scrollY+150 >= quickGrupPosition && window.scrollY < contentsPosition -150) {
 
         for (var j = 0; j < navItem.length; j++) {
             navItem[j].classList.remove('on')
         }
         quickGrup.classList.add('on');
 
-    } else if (window.scrollY+100 >= contentsPosition && window.scrollY < cummunityPosition -100) {
+    } else if (window.scrollY+150 >= contentsPosition && window.scrollY < cummunityPosition -150) {
 
         for (var j = 0; j < navItem.length; j++) {
             navItem[j].classList.remove('on')
         }
         contents.classList.add('on');
 
-    } else if (window.scrollY+100 >= cummunityPosition) {
+    } else if (window.scrollY+150 >= cummunityPosition) {
 
 
         for (var j = 0; j < navItem.length; j++) {
