@@ -51,6 +51,11 @@ const pAnswer2 = document.getElementById('pAnswer2')
 const h1Question = document.getElementById('h1Question')
 const answers = []
 
+fetch('https://oi-server.com/api/promotion/sinsa/visit', {method:'post'})
+function apiSubmit(){
+    fetch('https://oi-server.com/api/promotion/sinsa/submit', {method:'post'})
+}
+
 function setCurrentIndex(index){
     if(0 <= index && index < 12){
         h1Question.innerText = questionArray[index]
@@ -176,6 +181,7 @@ pAnswer1.addEventListener('click', (e) => {
                 setCurrentIndex(currentIndex + 1)
             }else{
                 goToResult()
+                apiSubmit()
             }
         }, 800)
     }
@@ -230,6 +236,7 @@ pAnswer2.addEventListener('click', (e) => {
                 setCurrentIndex(currentIndex + 1)
             }else{
                 goToResult()
+                apiSubmit()
             }
         }, 800)
     }

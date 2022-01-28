@@ -16,7 +16,7 @@
 
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <script src="/script/kakao.js"></script>
-    
+    <script src="/script/result.js"></script>
 </head>
 <body>
         
@@ -136,7 +136,7 @@
 
                         <h2 class="el_ttlContBox_subTtl hp_cNavi">중장년을 위한 취미기반<br> 소모임 플랫폼</h2>
 
-                        <a href="https://play.google.com/store/apps/details?id=com.koco.oi_android" class="un_oeDown">
+                        <a href="https://play.google.com/store/apps/details?id=com.koco.oi_android" class="un_oeDown" onclick="javascript:apiDownload()">
                             <figur class="un_oeDown_imgWrapper">
                                 <img src="/images/promotion/sinsa/il_oeCard.svg">
                             </figure>
@@ -165,7 +165,7 @@
                 
             </section>
 
-            <div class="el_lv1FillBtn el_lv1FillBtn_beforeIc el_lv1FillBtn__kako hp_w100" onclick="javascript:shareSinsaResult('/images/promotion/sinsa/sumnail_JunO.png')">
+            <div class="el_lv1FillBtn el_lv1FillBtn_beforeIc el_lv1FillBtn__kako hp_w100" onclick="javascript:shareSinsaResult('/images/promotion/sinsa/sumnail_JunO.png'); apiShare()">
                 <a class="ic_kakao"></a>
                 <span>내 결과 카카오톡으로 공유하기</span>
             </div>
