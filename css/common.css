@@ -317,3 +317,8 @@
 
 
 }
+
+
+@media screen and (max-height: 600px) {
+    .bl_quiz_count {margin-bottom: 16px;}
+}
