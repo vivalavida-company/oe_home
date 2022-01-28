@@ -76,10 +76,10 @@ function getMBTI(){
 function goToResult(){
     switch(getMBTI()){
         case 'entj':
-            location.href = './result/Sara.html'
+            location.href = './result/SaRa.html'
             break
         case 'entp':
-            location.href = './result/Sechan.html'
+            location.href = './result/SeChan.html'
             break
         case 'enfj':
             location.href = './result/DanDan.html'
@@ -97,7 +97,7 @@ function goToResult(){
             location.href = './result/YeonSil.html'
             break
         case 'esfp':
-            location.href = './result/Mirim.html'
+            location.href = './result/MiRim.html'
             break
         case 'intj':
             location.href = './result/ChaGeon.html'
