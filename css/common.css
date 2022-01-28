@@ -48,9 +48,9 @@
 .bl_quiz { padding: 12.5vh 0 3.1vh; display: flex; flex-direction: column; justify-content: space-between; align-items: center; height: 100vh; }
 .bl_quiz_count {display: flex; align-items: center; }
 .bl_quiz_count img{ width: 30px;}
-.bl_quiz_num { font-size: 32px; font-weight: bold; display: block; color: #25A765; position: relative; top: 4px;}
+.bl_quiz_num {font-family: "Times New Roman", serif; font-size: 32px; font-weight: bold; display: block; color: #25A765; position: relative; top: 1px; left: -3px;}
 .bl_quiz_cont {text-align: center; display: flex; flex-direction: column; align-items: center;}
-.bl_quiz_ttl {font-size: 26px; line-height: 36px; width: 91vw;}
+.bl_quiz_ttl {font-size: 26px; line-height: 36px; width: 91vw; word-break: keep-all;}
 .bl_quiz_txt {margin-bottom: 12px;}
 .bl_quiz_txt.on {transition-duration: 0.4s; background-color: #25A765 !important;}
 .bl_quiz_subCount {font-size: 20px; color: #767676;}
@@ -94,9 +94,9 @@
 .el_rowNav_col.el_rowNav_col_ic li:first-child {margin-left: 0;}
 .el_rowNav_col.el_rowNav_col_ic a {display: block; width: 100%; height: 100%;}
 
-.el_lv1FillBtn {font-size: 5.55vw; line-height: 30px; padding: 0.8em; border-radius: 5px; border: none; background-color: #25A765; display: flex; align-items: center; justify-content: center; color: #fff;}
+.el_lv1FillBtn {font-size: 5.55vw; line-height: calc(5.00vw + 12.00px);; padding: 0.8em; border-radius: 5px; border: none; background-color: #25A765; display: flex; align-items: center; justify-content: center; color: #fff; letter-spacing: 0;}
 .el_lv1FillBtn.el_lv1GraBtn__graOe {background: linear-gradient(135deg, #25A765, #04E2A5); border-radius: 28px; padding-left: 2.4em; padding-right: 2.4em;}
-.el_lv1FillBtn.el_lv1FillBtn__quiz {background-color: #000; border-radius: 0;}
+.el_lv1FillBtn.el_lv1FillBtn__quiz {background-color: #000; border-radius: 0; word-break: keep-all;} 
 .el_lv1FillBtn.el_lv1FillBtn__kako {background: #F7E01B; color: #000;}
 .el_lv1FillBtn.el_lv1FillBtn_beforeIc a {width:6.67vw; height: 6.67vw; display: block; position: relative; top: 3px; margin-right: 2.22vw;}
 
@@ -166,6 +166,8 @@
 .hp_mb12 {margin-bottom: 12px;}
 .hp_mb44 {margin-bottom: 44px;}
 .hp_mb50 {margin-bottom: 50px;}
+
+.hp_mt3_33v {margin-top: 3.33vw;}
 
 .hp_mt24vw {margin-top: 6.67vw;}
 .hp_mt12 {margin-top: 12px;}

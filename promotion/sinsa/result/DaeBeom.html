@@ -13,12 +13,15 @@
     <link rel="shortcut icon" href="/images/img_oe.svg">
     <title>오이 - 오십대들의 이야기</title>
     <link rel="stylesheet" href="/css/common.css">
+
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+    <script src="/script/kakao.js"></script>
 </head>
 <body>
         
     <section class="ly_result">
         
-        <a href="../start.html" class="el_lv1FillBtn el_lv1FillBtn__quiz hp_w100"> 테스트 시작하기 </a>
+        <a href="../start.html" class="el_lv1FillBtn el_lv1FillBtn__quiz hp_w100"> 나도 테스트하기 </a>
 
         <main class="hp_relative hp_mt24"> 
 
@@ -161,15 +164,21 @@
                 
             </section>
 
-            <div class="el_lv1FillBtn el_lv1FillBtn_beforeIc el_lv1FillBtn__kako hp_w100">
+            <div class="el_lv1FillBtn el_lv1FillBtn_beforeIc el_lv1FillBtn__kako hp_w100" onclick="javascript:shareSinsaResult('/images/promotion/sinsa/sumnail_DaeBeom.png')">
                 <a class="ic_kakao"></a>
                 <span>내 결과 카카오톡으로 공유하기</span>
             </div>
+
+            <a href="../start.html" class="el_lv1FillBtn el_lv1FillBtn__quiz hp_w100 hp_mt3_33v"> 나도 테스트하기</a>
+
 
         </main>
 
 
     </section>
+
+    <script src="/script/kakao.js"></script>
+
 
 </body>
 </html>
