@@ -34,7 +34,7 @@ const answer2Array = [
     '지금 잘하고 있는 부분과 조금 미흡하다고 생각되는 부분에 더 집중하여 의견을 말하는 편이다.',
     '새로운 아이디어로 기존에 안좋다고 생각했던 방식을 확실히 바꿀 것 같다. ',
     '아.. 요즘 표정이 안좋던데.. 힘든일이 있었구나! 공감부터 해준다. ',
-    '우리모암장은 일처리도 빠르고, 똑 부러지는 성격이라서 너무 좋아',
+    '우리모임장은 일처리도 빠르고, 똑 부러지는 성격이라서 너무 좋아',
     '이 친구가 많이 힘들었구나.. 좋은 친구인데 이렇게 힘들어하는줄 몰랐네.. ',
     '000 펜션으로 잡혔으니, 00시까지 모이시면 돼요! 필요한 물건들은 그때 만나서 사요~',
     '무슨 일이 있어 늦은 것일 수 있으니 이유를 한 번 물어보는 편이다. ',
@@ -73,13 +73,13 @@ function getMBTI(){
     return result
 }
 
-function goToResult(){
+function goToResult(){ 
     switch(getMBTI()){
         case 'entj':
-            location.href = './result/Sara.html'
+            location.href = './result/SaRa.html'
             break
         case 'entp':
-            location.href = './result/Sechan.html'
+            location.href = './result/SeChan.html'
             break
         case 'enfj':
             location.href = './result/DanDan.html'
@@ -97,7 +97,7 @@ function goToResult(){
             location.href = './result/YeonSil.html'
             break
         case 'esfp':
-            location.href = './result/Mirim.html'
+            location.href = './result/MiRim.html'
             break
         case 'intj':
             location.href = './result/ChaGeon.html'
