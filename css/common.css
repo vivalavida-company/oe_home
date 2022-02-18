@@ -69,8 +69,9 @@
 
 /* ---------------엘리먼트 시작------------------------ */
 
-
+.el_imgCover_wrapper {display: flex; justify-content: center;align-items: center;}
 .el_imgCover_wrapper img {width: 100%; object-position: center; object-fit: cover;}
+
 
 .el_lineBtn_h56 {height: 56px; font-size: 1em; background: #fff; padding: 0 12px; display: flex; justify-content: center; align-items: center; border: 1px solid #000;}
 .el_lineBtn_h56 a {content: ''; display: inline-block;  margin-left: 6px; width: 16px; height: 16px;}
