@@ -32,7 +32,7 @@
 .bl_media {display: flex; justify-content: space-between; align-items: center; position: relative; width: 1080px;}
 .bl_media_imgWrapper {position: absolute; right: 0; top: 50%; transform: translateY(-50%);}
 .bl_media_imgWrapper img {width: 800px;}
-.bl_media_subTtl {white-space: nowrap; font-size: 36px; font-weight: normal; letter-spacing: -0.05em;}
+.bl_media_subTtl {white-space: nowrap; font-size: 36px; font-weight: normal; letter-spacing: -0.05em; color: #767676;}
 .bl_media_ttl {font-size: 88px; margin: 32px 0;}
 .bl_media_lv2Ttl {font-size: 44px; margin: 16px 0 32px;  font-weight: bold; }
 .bl_media_ttl::before {content: ''; display: inline-block; height: 65px; background: #25A765; width: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; margin-right: 16px;}
