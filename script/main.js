@@ -137,6 +137,14 @@ cummunity.addEventListener('click', function () {
 })
 
 
+// 창 크기에 따라 이지 변경
+
+// if (window.innerWidth < 1180) {
+//     const cummunityImg = document.querySelector('.js_imgChange')
+//     cummunityImg.setAttribute('src', 'images/img_communityView.png');
+
+// }
+
 
 
 
