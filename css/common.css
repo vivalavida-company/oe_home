@@ -7,7 +7,7 @@
 .ly_result {padding: 12px; }
 .ly_quizResultCont {width: 93.33vw; position: relative; left: 50%; transform: translateX(-50%); padding-top: 75vw; padding-bottom: 6.67vw; margin-bottom: 3.33vw; display: flex; flex-direction: column; align-items: center;}
 .ly_quizResult {padding: 12px; display: flex; flex-direction: column; align-items: center; }
-.ly_center {width: 100vw; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.ly_center {overflow: hidden; width: 100vw; height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .ly_eventMain {padding: 70px 0 50px; }
 .ly_header {height: 650px;}
 .ly_header_inner {width: 1080px; margin: 0 auto; padding: 70px 0; height: 100%; display: flex; align-items: center;}
@@ -16,6 +16,11 @@
 /* //////////////////레아아웃 끝////////////////// */
 
 /* ---------------모듈 시작------------------------ */
+.bl_oeCardWrapper {display: flex; flex-wrap: nowrap; margin-bottom: 55px;}
+.bl_oeCardUnit {position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; width: 54Vw; height: 265px; margin: 0 5vw; border-radius: 25px; box-shadow: 0 3px 12px rgba(0,0,0,0.25);}
+.bl_oeCardUnit figcaption {font-size: 30px; font-weight: bold; letter-spacing: 0.05em; margin-top: 20px; color: #fff; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: #000;}
+.bl_oeCard_oeRnkLabel {transform: rotate(20deg); position: absolute; top: -20px; right: -35px;} 
+
 .bl_card {text-align: center; margin-bottom: 50px;}
 .bl_card:last-child {margin-bottom: 0;}
 .bl_card_imgWrapper img {width: 100%;}
@@ -68,6 +73,7 @@
 /* ///////모듈 끝/////// */
 
 /* ---------------엘리먼트 시작------------------------ */
+.el_oeRnkLabel {background: url(/images/promotion/oeTest/il_rank.svg) center no-repeat; background-size: 165px;  width: 165px; height: 70px; padding-top: 36px; font-size: 20px; font-weight: bold; white-space: pre; text-align: center;}
 
 .el_fixedBottom {position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);}
 
@@ -106,12 +112,14 @@
 .el_lv1FillBtn.el_lv1FillBtn__kako {background: #F7E01B; color: #000;}
 .el_lv1FillBtn.el_lv1FillBtn_beforeIc a {width:6.67vw; height: 6.67vw; display: block; position: relative; top: 3px; margin-right: 2.22vw;}
 
+.el_bgBtn56 {background: #000; height: 56px; border-radius: 28px; color: #fff; font-size: 16px; padding: 0 60px; display: flex; justify-content: center; align-items: center;}
+
 .el_ttlContCard_wrapper > * {margin-bottom: 5.55vw;}
 .el_ttlContCard_wrapper > *:last-child {margin-bottom: 0;}
 
 .el_ttlContBox {text-align: center; display: flex; flex-direction: column; align-items: center; }
 .el_ttlContBox_subTtl {font-size: 5.55vw; line-height: 1.5em; font-weight: bold; margin-bottom: 1em;}
-.el_ttlContBox_ttl {position: relative; font-size: 12vw; font-weight: bold; margin-bottom: 0.33em; display: inline-block;}
+.el_ttlContBox_ttl {position: relative; font-size: 12vw; font-weight: bold; margin-bottom: 0.33em; display: inline-block; white-space: pre;}
 .el_ttlContBox_ttlItem {margin-bottom: 28px; display: flex; flex-direction: column;}
 .el_ttlContBox_ttlItem:last-child {margin-bottom: 0;}
 .el_ttlContBox_txt {font-size: 4.44vw; }
@@ -119,6 +127,7 @@
 .el_box_cardV {width: 84.44vw; padding: 4.44vw 0 6.67vw; border-radius: 10px; box-shadow: 4px 4px 10px rgba(0,0,0,0.1); }
 .el_box_cardV .un_lineGreen::before {content: ''; display: block; width: 55%; height: 10px; background: #B2EEBF; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1;}
 .el_box_cardV .un_lineRed::before {content: ''; display: block; width: 55%; height: 10px; background: #EC9999; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); z-index: -1;}
+.el_box_cardV .un_lineOeV::before {width: 100%;}
 
 
 .el_context_wrapper {padding: 44px 24px;}
@@ -237,7 +246,15 @@
 
 .un_quizResultImg_wrap {width: 100vw; height: 100vw; position: absolute; top: -12px; left: -12px;}
 .un_quizResultImg_wrap img {width: 100%;}
+/* 모디파이어 */
+.un_quizResultImg_wrap.oeV {display: flex; align-items: center; justify-content: center;}
+.un_quizResultImg_wrap.oeV img{width: 60%; position: relative; bottom: 25px;}
 
+.un_oeResultLabel {background: url(/images/promotion/oeTest/il_rank.svg) center/ cover; width: 300px; height: 110px; padding-top: 58px; position: relative; top: 0px;}
+.un_oeResultLabel h1 {font-size: 36px; letter-spacing: 0; color: #191919;}
+.un_oeResultLabel span {position: relative; top: 10px; font-size: 16px; color: #767676; margin-top: 4px;}
+
+.un_oeTestTtl {font-size: 36px; font-weight: bold; letter-spacing: 0; margin-bottom: 28px; color: #9AF227;}
 
 /* 신사와아가씨 이벤트 */
 .un_oeDown_imgWrapper img {width: 21.66vw;}
