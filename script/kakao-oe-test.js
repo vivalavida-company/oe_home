@@ -9,8 +9,8 @@ function shareSinsaResult(imgUrl){ // 상대경로
     Kakao.Link.sendCustom({
         templateId: 69724,
         templateArgs: {
-            title: '신사와아가씨 유형 테스트',
-            description: '나는 신사와 아가씨에서 어떤 인물일까?',
+            title: '신사와아가씨 유형 테스트', // 미구현
+            description: '나는 신사와 아가씨에서 어떤 인물일까?', // 미구현
             IMAGE: imgUrl,
             PATH: location.pathname
         }

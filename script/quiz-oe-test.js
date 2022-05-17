@@ -51,9 +51,9 @@ const pAnswer2 = document.getElementById('pAnswer2')
 const h1Question = document.getElementById('h1Question')
 const answers = []
 
-fetch('https://oi-server.com/api/promotion/sinsa/visit', {method:'post'})
+fetch('https://oi-server.com/api/promotion/oe-test/visit', {method:'post'})
 function apiSubmit(){
-    fetch('https://oi-server.com/api/promotion/sinsa/submit', {method:'post'})
+    fetch('https://oi-server.com/api/promotion/oe-test/submit', {method:'post'})
 }
 
 function setCurrentIndex(index){
@@ -78,56 +78,8 @@ function getMBTI(){
 }
 
 function goToResult(){ 
-    switch(getMBTI()){
-        case 'entj':
-            location.href = './result/SaRa.html'
-            break
-        case 'entp':
-            location.href = './result/SeChan.html'
-            break
-        case 'enfj':
-            location.href = './result/DanDan.html'
-            break
-        case 'enfp':
-            location.href = './result/SeRyeon.html'
-            break
-        case 'estj':
-            location.href = './result/AenaKim.html'
-            break
-        case 'estp':
-            location.href = './result/DaeBeom.html'
-            break
-        case 'esfj':
-            location.href = './result/YeonSil.html'
-            break
-        case 'esfp':
-            location.href = './result/MiRim.html'
-            break
-        case 'intj':
-            location.href = './result/ChaGeon.html'
-            break
-        case 'intp':
-            location.href = './result/JunO.html'
-            break
-        case 'infj':
-            location.href = './result/JeNi.html'
-            break
-        case 'infp':
-            location.href = './result/MiSuk.html'
-            break
-        case 'istj':
-            location.href = './result/YoungGuk.html'
-            break
-        case 'istp':
-            location.href = './result/SeJong.html'
-            break
-        case 'isfj':
-            location.href = './result/DaeRan.html'
-            break
-        case 'isfp':
-            location.href = './result/SuCheol.html'
-            break
-    }
+    const result = getMBTI().toUpperCase()
+    location.href = `./result/${result}.html`
 }
 
 pAnswer1.addEventListener('click', (e) => {

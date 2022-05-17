@@ -44,7 +44,7 @@
     </main>
 
     <script>
-        fetch('https://oi-server.com/api/promotion/sinsa/submit-count')
+        fetch('https://oi-server.com/api/promotion/oe-test/submit-count')
         .then(async res => {
             document.getElementById('spanCount').innerText = await res.json()
         })
