@@ -52,3 +52,6 @@ a {
 .blind {
   display: none !important;
 }
+.hidden {
+  visibility: hidden;
+}
