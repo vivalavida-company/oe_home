@@ -17,11 +17,7 @@ nav,output,ruby,section,summary,time,mark,audio,video {
 }
 /* HTML5 display-role reset for older browsers */
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,
-nav,section { color: blue;   display: block;
-  text-align: center;
-  cursor: pointer;
-  margin-top: 60px;
-  font-size: 1.1rem;
+nav,section {
   display: block;
 }
 body {
