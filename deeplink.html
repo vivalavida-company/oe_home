@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OE-DEEP</title>
+</head>
+<body>
+    <h1>Test page</h1>
+    <p>요기 만들어주세용~</p>
+
+    <script>
+        console.log(window.location.search)
+        const deepQuery = window.location.search
+        const urlParams = new URLSearchParams(deepQuery)
+
+        if(urlParams.has('scheme')) {
+            const scheme = urlParams.get('scheme')
+            location.href = `intent://action?scheme=${scheme}#Intent;scheme=oeapp;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.koco.oi_android;end`
+        } else {
+            location.href = `intent://action#Intent;scheme=oeapp;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.koco.oi_android;end`
+        }
+
+    </script>
+</body>
+</html>
