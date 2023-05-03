@@ -14,17 +14,23 @@
 <body>
 
     <img src="/images/il_logo_oe.svg">
-    <button>오이 앱으로 이동하기</button>
+    <button id="oi">오이 앱으로 이동하기</button>
 
     <script>
-        console.log(window.location.search)
+        const oiBtn = document.querySelector('#oi')
+        oiBtn.addEventListener('click', () => {
+            location.href = `intent://action#Intent;scheme=oeapp;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.koco.oi_android;end`
+        })
+        
         const deepQuery = window.location.search
         const urlParams = new URLSearchParams(deepQuery)
 
         if(urlParams.has('scheme')) {
+            console.log('너 타는거 아니잖아')
             const scheme = urlParams.get('scheme')
             location.href = `intent://action?scheme=${scheme}#Intent;scheme=oeapp;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.koco.oi_android;end`
         } else {
+            console.log('너여야 맞지')
             location.href = `intent://action#Intent;scheme=oeapp;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.koco.oi_android;end`
         }
 
