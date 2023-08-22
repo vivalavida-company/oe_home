@@ -2,6 +2,8 @@
 
 @import url(./base.css);
 
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 
 /* ---------------레이아웃 시작------------------------ */
 .ly_result {padding: 12px; }
@@ -88,6 +90,7 @@
 /* ///////모듈 끝/////// */
 
 /* ---------------엘리먼트 시작------------------------ */
+
 .el_oeRnkLabel {background: url(/images/promotion/oeTest/il_rank.svg) center no-repeat; background-size: 165px;  width: 165px; height: 70px; padding-top: 36px; font-size: 20px; font-weight: bold; white-space: pre; text-align: center;}
 
 .el_fixedBottom {position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);}
@@ -161,7 +164,7 @@
 
 .el_division_vertical {height: 30px; width: 3px; background: #e5e5ec; position: relative; left: 50%; transform: translateX(-50%);} 
 
-
+.el_icSize_24 {display: inline-block; width: 24px; height: 24px;}
 
 /* //////////엘리먼트 끝////////// */
 
@@ -193,10 +196,10 @@
 .hp_c505050 {color: #505050 !important;}
 .hp_c767676 {color: #767676 !important;}
 .hp_cDarkGreen {color: #0B5932 !important;}
-.hp_cYellow {color: #EED822;}
-.hp_cGreen {color: #25A765;}
-.hp_cNavi {color: #1D3361;}
-.hp_cRed { color: #dc0000;}
+.hp_cYellow {color: #EED822 !important;}
+.hp_cGreen {color: #25A765 !important;}
+.hp_cNavi {color: #1D3361 !important;}
+.hp_cRed { color: #dc0000 !important;}
 
 .hp_pb100 {padding-bottom: 100px !important;}
 .hp_pb0 {padding-bottom: 0px !important;}
@@ -247,8 +250,35 @@
 /* /////////헬퍼클래스 끝///////////// */
 
 
-/* ---------------유니크클래스 시작------------------------ */
-
+/* ---------------유니크 클래스 시작------------------------ */
+.un_classPage {padding-bottom: 86px;}
+.un_classPage_img {width: 100%;}
+.un_classPage_info {display: flex; flex-direction: column; gap: 24px; padding: 0 16px;}
+.un_classPage_info_imgWrapper {width: 100vw; margin-left: -16px;}
+.un_classPage_info_imgWrapper img {width: 100%;}
+.un_classPage_info_main {padding: 0 8px;}
+.un_classPage_info_main .title_unit {margin-bottom: 40px;}
+.un_classPage_info_main .label_wrapper {display: inline-flex; gap: 8px;}
+.un_classPage_info_main .label_wrapper li:first-child {background: #5001F9; color: #fff;}
+.un_classPage_info_main .label_wrapper li {display: inline-block; font-size: 14px; color: #767676; padding: 6px 8px; border-radius: 4px; background: #f1f1f1;}
+.un_classPage_info_main .title_unit h1 {margin-top: 12px; font-size: 24px; line-height: 32px; font-weight: bold; color: #333; letter-spacing: 0;}
+.un_classPage_info_main .price_unit > span {display: inline-block; margin-bottom: 8px; font-size: 14px; color: #767676;}
+.un_classPage_info_main .price_unit .price {display: flex; align-items: flex-end; gap: 8px;}
+.un_classPage_info_main .price_unit .price p {font-size: 24px; font-weight: bold; color: #333;}
+.un_classPage_info_main .price_unit .price span {text-decoration: line-through; color: #767676;}
+.un_classPage_info_sub {padding: 0 30px; margin-top: 8px; border-radius: 20px; background: #f7f7fb;}
+.un_classPage_info_sub .unit {display: flex; flex-direction: column; gap: 8px; padding: 30px 0; border-bottom: 1px solid #e5e5ec;}
+.un_classPage_info_sub .unit h3 {display: inline-flex; align-items: center; gap: 4px; color: #333;}
+.un_classPage_info_sub .unit p {font-size: 16px; line-height: 24px; color: #767676;}
+.un_classPage_info_sub .unit a {align-self: flex-start; display: inline-block; padding: 8px 12px; margin-top: 8px; border: 1px solid #333; font-size: 14px; color: #333;}
+.un_classPage_info_sub .unit:last-child {border: 0;}
+.un_classPage_info_ps {display: flex; gap: 12px; flex-direction: column; align-items: center; padding: 30px 0; border: 1px solid #e5e5ec; border-radius: 20px;}
+.un_classPage_info_ps img {width: 50px; height: 50pxs;}
+.un_classPage_info_ps p {text-align: center; font-size: 16px; line-height: 24px; color: #333;}
+.un_classPage_btnWrapper {box-sizing: border-box; position: fixed; bottom: 0; left: 0; display: flex; gap: 8px; width: 100%; padding: 16px; background: #fff; box-shadow: -4px 0 8px rgba(0,0,0,0.25);}
+.un_classPage_btn {flex-grow: 1; display: flex; justify-content: center; align-items: center; height: 56px; padding: 0 30px; text-decoration: none; font-size: 16px;}
+.un_classPage_btn.fill {background: #25A765; color: #fff;}
+.un_classPage_btn.line {border: 1px solid #25a765; color: #25A765;}
 
 .un_cont {width: 100vw; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;}
 .un_cont h1 {font-size: 36px; line-height: 48px;}
@@ -294,7 +324,10 @@
 
 /* ---------------아이콘 셋 시작------------------------ */
 
-
+.ic_time_fill {background: url(/images/ic_time_fill.svg) center/ cover;}
+.ic_user_fill {background: url(/images/ic_user_fill.svg) center/ cover;}
+.ic_pin_fill {background: url(/images/ic_pin_fill.svg) center/ cover;}
+.ic_warning_fill {background: url(/images/ic_warning_fill.svg) center/ cover;}
 .ic_dot_darkGreen {background: url(../images/ic_dot_darkGreen.svg) center / cover;}
 .ic_spread_down {background: url(../images/ic_spread_down.svg) center / cover;}
 .ic_spread_up {background: url(../images/ic_spread_up.svg) center / cover;}
