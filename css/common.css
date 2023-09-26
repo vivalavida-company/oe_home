@@ -269,7 +269,7 @@
 .un_classPage_info_main .price_unit .price p {font-size: 24px; font-weight: bold; color: #333;}
 .un_classPage_info_main .price_unit .price span {text-decoration: line-through; color: #767676;}
 .un_classPage_info_sub {padding: 0 30px; margin-top: 8px; border-radius: 20px; background: #f7f7fb;}
-.un_classPage_info_sub .unit {display: flex; flex-direction: column; gap: 4px; padding: 30px 0; border-bottom: 1px solid #e5e5ec;}
+.un_classPage_info_sub .unit {display: flex; flex-direction: column; gap: 8px; padding: 30px 0; border-bottom: 1px solid #e5e5ec;}
 .un_classPage_info_sub .unit h3 {display: inline-flex; align-items: center; gap: 4px; color: #333;}
 .un_classPage_info_sub .unit p {font-size: 16px; line-height: 24px; color: #767676; letter-spacing: 0;}
 .un_classPage_info_sub .unit a {align-self: flex-start; display: inline-block; padding: 8px 12px; margin-top: 8px; border: 1px solid #333; font-size: 14px; color: #333;}
