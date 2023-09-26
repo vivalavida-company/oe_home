@@ -261,9 +261,10 @@
 .un_classPage_info_main .title_unit {margin-bottom: 40px;}
 .un_classPage_info_main .label_wrapper {display: inline-flex; gap: 8px;}
 .un_classPage_info_main .label_wrapper li:first-child {background: #5001F9; color: #fff;}
+.un_classPage_info_main .label_wrapper li.green:first-child {background: #5FBD00;}
 .un_classPage_info_main .label_wrapper li {display: inline-block; font-size: 14px; color: #767676; padding: 6px 8px; border-radius: 4px; background: #f1f1f1;}
 .un_classPage_info_main .title_unit h1 {margin-top: 12px; font-size: 24px; line-height: 32px; font-weight: bold; color: #333; letter-spacing: 0;}
-.un_classPage_info_main .price_unit > span {display: inline-block; margin-bottom: 8px; font-size: 14px; color: #767676;}
+.un_classPage_info_main .price_unit > span {display: inline-block; margin-bottom: 12px; font-size: 14px; color: #767676; letter-spacing: 0;}
 .un_classPage_info_main .price_unit .price {display: flex; align-items: flex-end; gap: 8px;}
 .un_classPage_info_main .price_unit .price p {font-size: 24px; font-weight: bold; color: #333;}
 .un_classPage_info_main .price_unit .price span {text-decoration: line-through; color: #767676;}
@@ -325,6 +326,7 @@
 
 /* ---------------아이콘 셋 시작------------------------ */
 
+.ic_iBook_fill {background: url(/images/ic_iBook_fill.svg) center/ cover;}
 .ic_time_fill {background: url(/images/ic_time_fill.svg) center/ cover;}
 .ic_user_fill {background: url(/images/ic_user_fill.svg) center/ cover;}
 .ic_pin_fill {background: url(/images/ic_pin_fill.svg) center/ cover;}
