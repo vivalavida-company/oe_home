@@ -90,6 +90,7 @@
 /* ///////모듈 끝/////// */
 
 /* ---------------엘리먼트 시작------------------------ */
+.el_btn56_line {height: 40px; padding: 0 16px; font-size: 14px; color: #333; border: 1px solid #e5e5ec; border-radius: 28px;}
 
 .el_oeRnkLabel {background: url(/images/promotion/oeTest/il_rank.svg) center no-repeat; background-size: 165px;  width: 165px; height: 70px; padding-top: 36px; font-size: 20px; font-weight: bold; white-space: pre; text-align: center;}
 
@@ -172,6 +173,7 @@
 
 .hp_vw91 {width: 91vw !important;}
 
+.hp_w230 {width: 230px !important;}
 .hp_w500 {width: 500px !important;}
 .hp_w600 {width: 600px !important;}
 .hp_w650 {width: 650px !important;}
@@ -252,6 +254,14 @@
 
 
 /* ---------------유니크 클래스 시작------------------------ */
+.un_personalPage_select {position: relative; display: flex; width: 230px; align-items: center; margin-top: 12px; overflow: hidden;}
+.un_personalPage_select::after {content: ''; pointer-events: none; z-index: 2; display: inline-block; width: 20px; height: 20px; position: absolute; right: 16px; background: url(/images/ic_fillArrow_right.png) center / cover;}
+.un_personalPage_select::before {content: ''; pointer-events: none; z-index: 1; display: inline-block; width: 50px; height: 40px; position: absolute; right: 0px; background: linear-gradient( to right, rgba(255,255,255,0) 0, rgba(255,255,255,1) 20%) }
+.un_personalPage_select select {outline: none; height: 100%; background: none; border: none; font-size: 14px; color: #111;}
+.un_personalPage_select select option[value=""] {
+    display: none;
+}
+
 .un_classPage {padding-bottom: 86px;}
 .un_classPage_img {width: 100%;}
 .un_classPage_info {display: flex; flex-direction: column; gap: 24px; padding: 0 16px;}
