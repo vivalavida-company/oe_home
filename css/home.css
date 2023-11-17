@@ -145,6 +145,7 @@
   border-radius: 16px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid white;
+  backdrop-filter: blur(2px);
 }
 .main_banner_txt_wrapper div p {
   font-family: "Pretendard-Bold";
@@ -685,10 +686,10 @@
   .main_banner_img_wrapper::before {
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0.8) 0%,
       rgba(0, 0, 0, 0) 25%,
       rgba(0, 0, 0, 0) 75%,
-      rgba(0, 0, 0, 0.7) 100%
+      rgba(0, 0, 0, 0.8) 100%
     );
   }
   .main_banner_txt_wrapper {
