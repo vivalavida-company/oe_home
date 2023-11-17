@@ -677,7 +677,7 @@
     justify-content: center;
   }
   .main_banner_img_wrapper {
-    height: 540px;
+    height: 100%;
   }
   .main_banner_img_wrapper > img {
     transform: scale(1);
