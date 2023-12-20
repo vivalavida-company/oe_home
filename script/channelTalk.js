@@ -4,6 +4,6 @@ ChannelIO("boot", {
   hideChannelButtonOnBoot: true,
 });
 
-document.getElementById("channel-talk").addEventListener("click", () => {
+document.querySelector(".channelTalk_btn").addEventListener("click", () => {
   ChannelIO("showMessenger");
 });
