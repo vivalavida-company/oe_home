@@ -25,6 +25,9 @@
     color: #828894;
     margin-bottom: 12px;
   }
+  .bl_screedSet_txt.dif {
+    white-space: pre-line;
+  }
   .bl_screedSet_txt:last-child {
     margin-bottom: 0;
   }
