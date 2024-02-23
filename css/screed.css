@@ -1,0 +1,99 @@
+.bl_screedSet {
+    padding: 16px 16px;
+  }
+  .bl_screedSet_unit {
+    margin-bottom: 30px;
+  }
+  .bl_screedSet_lgTtl {
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: bold;
+    color: #31353D;
+  }
+  .bl_screedSet_mdTtl {
+    font-size: 20px;
+    line-height: 30px;
+    color: #31353D;
+    margin-bottom: 12px;
+  }
+  .bl_screedSet img {
+    border-radius: 5px;
+  }
+  .bl_screedSet_txt {
+    font-size: 18px;
+    line-height: 27px;
+    color: #828894;
+    margin-bottom: 12px;
+  }
+  .bl_screedSet_txt:last-child {
+    margin-bottom: 0;
+  }
+  .bl_screedSet_list li {
+    font-size: 18px;
+    line-height: 27px;
+    color: #828894;
+    margin-bottom: 8px;
+    list-style: decimal;
+    list-style-position: inside;
+    text-indent: -14px;
+    padding-left: 12px;
+  }
+  .bl_screedSet_list.dif li {
+    list-style-type:none;
+    white-space: pre-line;
+  }
+  .bl_screedSet_list li:last-child {
+    margin-bottom: 0;
+  }
+  .bl_screedSet_ListInList {
+    margin-bottom: 12px;
+  }
+  .bl_screedSet_ListInList p {
+    font-size: 14px;
+    color: #505050;
+    margin-bottom: 4px;
+  }
+  .bl_screedSet_ListInList > li {
+    margin-bottom: 16px;
+  }
+  .bl_screedSet_ListInList > li:last-child {
+    margin-bottom: 0;
+  }
+  .bl_screedSet_ListInList > li li {
+    font-size: 14px;
+    color: #828894;
+    margin-bottom: 2px;
+  }
+  .bl_screedSet_ListInList > li li:last-child {
+    margin-bottom: 0;
+  }
+  .bl_screedSet_smTxt {
+    font-size: 16px;
+    line-height: 24px;
+    color: #828894;
+  }
+  .bl_screedSet_dotListTxt {
+    list-style-type: disc;
+    font-size: 18px;
+    line-height: 27px;
+    color: #828894;
+  }
+  .bl_screedSet_dotListTxt::marker {
+    font-size: 12px;
+  }
+  /* 수정자 */
+  .bl_screedSet_list.bl_screedSet_list__dot li {
+    list-style: disc;
+    list-style-position: inside;
+    text-indent: -20px;
+    padding-left: 28px;
+  }
+  .bl_screedSet_unit.bl_screedSet_unit__tableSlide {
+    overflow: auto;
+    width: 100vw;
+    padding-right: 32px;
+    box-sizing: border-box;
+  }
+  .bl_screedSet_unit.bl_screedSet_unit__tableSlide::-webkit-scrollbar {
+    display: none;
+  }
