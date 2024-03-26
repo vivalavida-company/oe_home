@@ -32,8 +32,8 @@
     margin-bottom: 0;
   }
   .bl_screedSet_list li {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 15px;
+    line-height: 22px;
     color: #828894;
     margin-bottom: 8px;
     list-style: decimal;
@@ -99,4 +99,57 @@
   }
   .bl_screedSet_unit.bl_screedSet_unit__tableSlide::-webkit-scrollbar {
     display: none;
+  }
+
+
+  .bl_vertTable {
+    border: 1px solid #e5e5ec;
+    width: 100%;
+  }
+  .bl_vertTable th {
+    text-align: center;
+    padding: 9px 12px;
+    font-size: 12px;
+    border-bottom: 1px solid #e5e5ec;
+    border-right: 1px solid #e5e5ec;
+    color: #111;
+    background: #f1f1f1;
+  }
+  .bl_vertTable td {
+    padding: 12px;
+    font-size: 12px;
+    line-height: 18px;
+    border-right: 1px solid #e5e5ec;
+    color: #505050;
+    background: #fcfcfc;
+    white-space: pre-line;
+  }
+  .bl_vertTable th:last-child {
+    border-right: none;
+  }
+  .bl_vertTable td:last-child {
+    border-right: none;
+  }
+
+  .hp_mW70 {
+    min-width: 70px !important;
+  }
+  .hp_mW120 {
+    min-width: 120px !important;
+  }
+  .hp_mW170 {
+    min-width: 170px !important;
+  }
+  .hp_mW220 {
+    min-width: 220px !important;
+  }
+  .hp_mb16 {
+    margin-bottom: 16px !important;
+  }
+
+
+  .el_widthPullSize {
+    width: 100vw;
+    margin-left: -16px;
+    padding: 0 16px;
   }
