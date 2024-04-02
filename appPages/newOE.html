@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+    <link rel="shortcut icon" href="/images/img_oe.svg">
+    <title>오이 - 오십대들의 이야기</title>
+    <link rel="stylesheet" href="/css/common.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-219972956-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-219972956-1');
+    </script>
+
+    <!-- 구글 에드센스 광고 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7162501071654020"
+    crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <div class="bl_fullScreenCarousel hp_bgLightGray">
+        <section class="bl_fullScreenCarousel_item">
+            <div class="bl_fullScreenCarousel_panel">
+                <h1 class="bl_fullScreenCarousel_panel_ttl">이제는 모임을<br><span class="hp_colorGreen">한 눈에</span> 파악할 수 있어요</h1>
+                <img class="bl_fullScreenCarousel_panel_img" src="/appPages/images/img_changedOE1.png" alt="오이가 바뀌었어요 1">
+            </div>
+        </section>
+        <section class="bl_fullScreenCarousel_item">
+            <div class="bl_fullScreenCarousel_panel">
+                <h1 class="bl_fullScreenCarousel_panel_ttl">모임 만들기도<br><span class="hp_colorGreen">고르기만 하면</span> 끝나요</h1>
+                <img class="bl_fullScreenCarousel_panel_img" src="/appPages/images/img_changedOE2.png" alt="오이가 바뀌었어요 1">
+            </div>
+        </section>
+        <section class="bl_fullScreenCarousel_item">
+            <div class="bl_fullScreenCarousel_panel">
+                <h1 class="bl_fullScreenCarousel_panel_ttl"><span class="hp_colorGreen">가입 승인제</span>가<br>생겼어요</h1>
+                <img class="bl_fullScreenCarousel_panel_img" src="/appPages/images/img_changedOE3.png" alt="오이가 바뀌었어요 1">
+            </div>
+        </section>
+        <section class="bl_fullScreenCarousel_item">
+            <div class="bl_fullScreenCarousel_panel">
+                <h1 class="bl_fullScreenCarousel_panel_ttl"><span class="hp_colorGreen">일정을 위한 채팅방</span>도<br>따로 생겨요</h1>
+                <img class="bl_fullScreenCarousel_panel_img" src="/appPages/images/img_changedOE4.png" alt="오이가 바뀌었어요 1">
+            </div>
+        </section>
+        <section class="bl_fullScreenCarousel_item">
+            <div class="bl_fullScreenCarousel_panel">
+                <h1 class="bl_fullScreenCarousel_panel_ttl">의견을 편하게<br><span class="hp_colorGreen">모아요</span></h1>
+                <img class="bl_fullScreenCarousel_panel_img" src="/appPages/images/img_changedOE5.png" alt="오이가 바뀌었어요 1">
+                <span class="bl_fullScreenCarousel_panel_ps">*4월말 출시 예정</span>
+            </div>
+        </section>
+        <section class="bl_fullScreenCarousel_item">
+            <div class="bl_fullScreenCarousel_panel">
+                <h1 class="bl_fullScreenCarousel_panel_ttl">이제는 편리하게<br><span class="hp_colorGreen">채팅</span>해요</h1>
+                <img class="bl_fullScreenCarousel_panel_img" src="/appPages/images/img_changedOE6.png" alt="오이가 바뀌었어요 1">
+                <span class="bl_fullScreenCarousel_panel_ps">*4월말 출시 예정</span>
+            </div>
+        </section>
+        <section class="bl_fullScreenCarousel_item">
+            <div class="bl_fullScreenCarousel_panel">
+                <h1 class="bl_fullScreenCarousel_panel_ttl">더 알아볼까요?</h1>
+                <div class="bl_menuList">
+                    <a href="" class="bl_menuList_item">
+                        <p>오이가 궁금해요</p>
+                        <i class="ic_fillArrow el_icSize"></i>
+                    </a>
+                    <a href="" class="bl_menuList_item">
+                        <p>모임플래너가 궁금해요</p>
+                        <i class="ic_fillArrow el_icSize"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <article class="bl_fullScreenCarousel_indicator">
+        </article>
+    </div>
+
+    <script>       
+        const carousel = document.querySelector('.bl_fullScreenCarousel');
+        const indicatorContainer = document.querySelector('.bl_fullScreenCarousel_indicator');
+
+        // 아이템 개수만큼 인디케이터 추가
+        const carouselItems = document.querySelectorAll('.bl_fullScreenCarousel_item');
+        carouselItems.forEach((_, index) => {
+            const indicator = document.createElement('i');
+            indicator.classList.add('bl_fullScreenCarousel_indicator_item');
+            if (index === 0) {
+                indicator.classList.add('__on');
+            }
+            indicatorContainer.appendChild(indicator);
+        });
+
+        carousel.addEventListener('scroll', () => {
+            const scrollPosition = carousel.scrollLeft;
+            const itemWidth = carouselItems[0].offsetWidth;
+            const currentItemIndex = Math.round(scrollPosition / itemWidth);
+            const indicators = document.querySelectorAll('.bl_fullScreenCarousel_indicator_item');
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('__on', index === currentItemIndex);
+            });
+        });
+    </script>
+
+</body>
+
+
+</html>
