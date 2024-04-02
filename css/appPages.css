@@ -35,9 +35,9 @@
 .bl_footerBtnSet {display: flex; flex-direction: column; gap: 24px; padding: 60px 16px; background: #F7F8F9;}
 .bl_footerBtnSet_ttl {font-size: 20px; line-height: 30px; color: var(--sys_font_color_main); text-align: center;}
 
-.bl_fullScreenCarousel {position: relative; display: flex; width: 100vw; height: 100vh; overflow: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: normal;}
+.bl_fullScreenCarousel {position: relative; display: flex; width: 100vw; height: 100vh; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: normal;}
 .bl_fullScreenCarousel::-webkit-scrollbar {display: none;}
-.bl_fullScreenCarousel_item {display: flex; flex-direction: column; justify-content: center; align-items: center; flex-shrink: 0; width: 100vw; height: 100%; overflow: hidden; scroll-snap-align: start; scroll-snap-stop:always;}
+.bl_fullScreenCarousel_item {display: flex; flex-direction: column; justify-content: center; align-items: center; flex-shrink: 0; width: 100vw; height: 100vh; overflow: hidden; scroll-snap-align: start; scroll-snap-stop:always;}
 .bl_fullScreenCarousel_indicator {position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;}
 .bl_fullScreenCarousel_indicator_item {width: 8px; height: 8px; border-radius: 50%; background: #DCDEE3; transition: 350ms linear;}
 .bl_fullScreenCarousel_indicator_item.__on {background: #565B66;}
