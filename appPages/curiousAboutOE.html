@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" name="viewport">
+    <link rel="shortcut icon" href="/images/img_oe.svg">
+    <title>오이 - 오십대들의 이야기</title>
+    <link rel="stylesheet" href="/css/common.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-219972956-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-219972956-1');
+    </script>
+
+    <!-- 구글 에드센스 광고 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7162501071654020"
+    crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    <div class="bl_fullScreenCarousel hp_bgLightGray">
+        <section class="bl_fullScreenCarousel_item">
+            <div class="bl_fullScreenCarousel_panel">
+                <h1 class="bl_fullScreenCarousel_panel_ttl">오이는<span class="hp_colorGreen">취미 친구</span>를<br>만들 수 있는 공간이에요</h1>
+                <img class="bl_fullScreenCarousel_panel_img" src="/appPages/images/img_curiousAboutOE1.png" alt="오이가 궁금해요 1">
+            </div>
+        </section>
+        <section class="bl_fullScreenCarousel_item">
+            <div class="bl_fullScreenCarousel_panel">
+                <h1 class="bl_fullScreenCarousel_panel_ttl"><span class="hp_colorGreen">매너 좋은 사람들</span>과<br>함께 하는 취미 생활</h1>
+                <img class="bl_fullScreenCarousel_panel_img" src="/appPages/images/img_curiousAboutOE2.png" alt="오이가 궁금해요 2">
+            </div>
+        </section>
+        <section class="bl_fullScreenCarousel_item">
+            <div class="bl_fullScreenCarousel_panel">
+                <h1 class="bl_fullScreenCarousel_panel_ttl">이미 <span class="hp_colorGreen">10만 회원</span>이<br>오이에서 즐기고 있어요</h1>
+                <img class="bl_fullScreenCarousel_panel_img" src="/appPages/images/img_curiousAboutOE3.png" alt="오이가 궁금해요 3">
+            </div>
+        </section>
+        <section class="bl_fullScreenCarousel_item">
+            <div class="bl_fullScreenCarousel_panel">
+                <h1 class="bl_fullScreenCarousel_panel_ttl"><span class="hp_colorGreen">즐거운 모임활동</span><br>오이가 응원해요!</h1>
+                <img class="bl_fullScreenCarousel_panel_img" src="/appPages/images/img_curiousAboutOE4.png" alt="오이가 궁금해요 4">
+            </div>
+        </section>
+        <section class="bl_fullScreenCarousel_item">
+            <div class="bl_fullScreenCarousel_panel">
+                <h1 class="bl_fullScreenCarousel_panel_ttl">더 알아볼까요?</h1>
+                <div class="bl_menuList">
+                    <a href="/appPages/aboutNewUpdate.html" class="bl_menuList_item">
+                        <p>오이가 바뀌었어요</p>
+                        <i class="ic_fillArrow el_icSize"></i>
+                    </a>
+                    <a href="/appPages/introducingMeetingPlanner.html" class="bl_menuList_item">
+                        <p>모임장님, 고민있으세요?</p>
+                        <i class="ic_fillArrow el_icSize"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <article class="bl_fullScreenCarousel_indicator">
+        </article>
+    </div>
+
+    <script>       
+        const carousel = document.querySelector('.bl_fullScreenCarousel');
+        const indicatorContainer = document.querySelector('.bl_fullScreenCarousel_indicator');
+
+        // 아이템 개수만큼 인디케이터 추가
+        const carouselItems = document.querySelectorAll('.bl_fullScreenCarousel_item');
+        carouselItems.forEach((_, index) => {
+            const indicator = document.createElement('i');
+            indicator.classList.add('bl_fullScreenCarousel_indicator_item');
+            if (index === 0) {
+                indicator.classList.add('__on');
+            }
+            indicatorContainer.appendChild(indicator);
+        });
+
+        carousel.addEventListener('scroll', () => {
+            const scrollPosition = carousel.scrollLeft;
+            const itemWidth = carouselItems[0].offsetWidth;
+            const currentItemIndex = Math.round(scrollPosition / itemWidth);
+            const indicators = document.querySelectorAll('.bl_fullScreenCarousel_indicator_item');
+            indicators.forEach((indicator, index) => {
+                indicator.classList.toggle('__on', index === currentItemIndex);
+            });
+        });
+    </script>
+
+</body>
+
+
+</html>
