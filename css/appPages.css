@@ -46,7 +46,7 @@
 .bl_fullScreenCarousel_panel_ttl {font-size: 24px; line-height: 34px; font-weight: bold; color: var(--sys_font_color_main); text-align: center; letter-spacing: 0;}
 .bl_fullScreenCarousel_panel_img {width: 360px;}
 .bl_fullScreenCarousel_panel_ps {position: absolute; bottom: 0px; color: var(--sys_font_color_primary);}
-.bl_fullScreenCarousel_panel_btn {display: flex; align-items: center; gap: 12px; height: 60px; padding: 0 24px; border-radius: 16px; background: #00B158; font-size: 18px; color: #fff;}
+.bl_fullScreenCarousel_panel_btn {display: flex; align-items: center; gap: 12px; height: 60px; padding: 0 24px; border-radius: 16px; background: #26BD72; font-size: 18px; color: #fff;}
 /* 모디파이어 */
 .bl_fullScreenCarousel_panel_btn.__am_float {animation: am_float 1550ms infinite;}
 .bl_fullScreenCarousel_panel_btn i {display: inline-block; width: 16px; height: 16px;}
