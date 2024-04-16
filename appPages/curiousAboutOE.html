@@ -183,6 +183,36 @@
                 });
             });
         });
+
+
+        // 특정 브라우저에서 모달 뒤에서 슬라이드 되는 현상 막기
+        // 타겟 요소와 관찰자 생성
+        var modalElement = document.querySelector('.js_modal_fingerGesture');
+        var carouselElement = document.querySelector('.js_fullScreenCarousel');
+
+        var observer = new MutationObserver(function(mutationsList) {
+            for (var mutation of mutationsList) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+                    // js_modal_fingerGesture의 display 속성이 변경될 때마다 실행됨
+                    if (window.getComputedStyle(modalElement).display === 'none') {
+                        // 모달이 숨겨진 경우 overflow-x를 auto로 변경
+                        carouselElement.style.overflowX = 'auto';
+                    } else {
+                        // 모달이 보여지는 경우 overflow-x를 hidden으로 변경
+                        carouselElement.style.overflowX = 'hidden';
+                    }
+                }
+            }
+        });
+
+        // 모달 요소의 스타일 변경을 감시
+        var observerConfig = {
+            attributes: true, // 속성 변경 감지
+            attributeFilter: ['style'], // style 속성 변경만 감지
+            attributeOldValue: true // 변경 전의 속성 값 반환
+        };
+
+        observer.observe(modalElement, observerConfig);
     </script>
 
 

@@ -92,3 +92,4 @@
 .un_putBadge.__crown::after {background: url(/images/appPages/il_crownBadge.png) center / cover; }
 .un_putBadge.__star::after {background: url(/images/appPages/il_starBadge.png) center / cover; }
 
+.js_fullScreenCarousel {overflow-x: hidden;}
