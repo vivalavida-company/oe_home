@@ -144,13 +144,42 @@
             }
         }
 
-
-        // 모달 요소에 클릭 이벤트 추가
+        // 모달에 클릭 이벤트 추가
         document.addEventListener('DOMContentLoaded', function() {
             var modalElements = document.querySelectorAll('.js_modal_fingerGesture');
             modalElements.forEach(function(modal) {
                 modal.addEventListener('click', function() {
                     closeModal(); // 모달 클릭하면 닫음
+                });
+            });
+        });
+
+        // 모달에 슬라이드 제스처시 닫게 함
+        document.addEventListener('DOMContentLoaded', function() {
+            var modalElements = document.querySelectorAll('.js_modal_fingerGesture');
+            modalElements.forEach(function(modal) {
+                var startX, startY; // 슬라이드 시작 지점
+                var threshold = 20; // 슬라이드로 인식할 최소 이동 거리
+
+                // 터치 시작 이벤트
+                modal.addEventListener('touchstart', function(e) {
+                    startX = e.touches[0].clientX;
+                    startY = e.touches[0].clientY; // Y 축 시작 지점 추가
+                });
+
+                // 터치 종료 이벤트
+                modal.addEventListener('touchend', function(e) {
+                    var endX = e.changedTouches[0].clientX;
+                    var endY = e.changedTouches[0].clientY;
+
+                    // 이동 거리 계산
+                    var deltaX = Math.abs(endX - startX);
+                    var deltaY = Math.abs(endY - startY);
+
+                    // 좌우 또는 상하 슬라이드 판단
+                    if (deltaX > threshold || deltaY > threshold) {
+                        closeModal(); // 모달 닫기
+                    }
                 });
             });
         });
