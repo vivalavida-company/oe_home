@@ -21,9 +21,15 @@
 
 .el_btn_normal_lg {display: flex; justify-content: center; align-items: center; height: 60px; border-radius: 16px; border: 0; font-size: 18px; color: #fff; background: #565B66;}
 
-.el_icSize {display: inline-block; width: 24px; height: 24px;}
+.el_icSize_24 {display: inline-block; width: 24px; height: 24px;}
+.el_icSize_48 {display: inline-block; width: 48px; height: 48px;}
 
 
+.bl_lightModal {position: absolute; top: 0; left: 0; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 100vw; height: 100vh; padding: 24px 16px; background: rgba(0,0,0,0.6);}
+.bl_lightModal_header {display: flex; justify-content: flex-end; width: 100%;}
+.bl_lightModal_body {display: flex; flex-direction: column; gap: 12px; align-items: center; padding-bottom: 60px;}
+.bl_lightModal_body_img {width: 87px; transform: translateX(16%);}
+.bl_lightModal_body_txt {font-size: 20px; line-height: 120%; color: #fff;}
 
 .bl_desc_ttl {margin-bottom: 8px; font-size: 24px; line-height: 34px; color: var(--sys_font_color_main);}
 .bl_desc_subTtl {margin-bottom: 16px; font-size: 20px; line-height: 30px; font-weight: bold; color: var(--sys_font_color_sub);}
@@ -37,6 +43,9 @@
 .bl_fullScreenCarousel {position: relative; display: flex; width: 100vw; height: 100vh; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: normal;}
 .bl_fullScreenCarousel::-webkit-scrollbar {display: none;}
 .bl_fullScreenCarousel_item {display: flex; flex-direction: column; justify-content: center; align-items: center; flex-shrink: 0; width: 100vw; height: 100vh; overflow: hidden; scroll-snap-align: start; scroll-snap-stop:always;}
+.bl_fullScreenCarousel_item.__intro .bl_fullScreenCarousel_panel {gap: 12px;}
+.bl_fullScreenCarousel_item.__intro .bl_fullScreenCarousel_panel_ttl {font-size: 42px; line-height: 48px;}
+.bl_fullScreenCarousel_item.__intro .bl_fullScreenCarousel_panel_img {width: 140px;}
 .bl_fullScreenCarousel_indicator {position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;}
 .bl_fullScreenCarousel_indicator_item {width: 8px; height: 8px; border-radius: 50%; background: #DCDEE3; transition: 350ms linear;}
 .bl_fullScreenCarousel_indicator_item.__on {background: #565B66;}
@@ -70,6 +79,7 @@
 
 .ic_fillArrow {background: url(/appPages/images/ic_fillArrow.svg) center / cover;}
 .ic_lineArrow_right_white {background: url(/appPages/images/ic_lineArrow_right_white.svg) center / cover;}
+.ic_cancel_lightGray {background: url(/appPages/images/ic_cancel_lightGray.svg) center / cover;}
 
 
 
