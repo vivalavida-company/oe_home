@@ -42,7 +42,7 @@
 
 .bl_fullScreenCarousel {box-sizing: content-box; position: relative; display: flex; width: 100vw; height: 100vh; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: normal;}
 .bl_fullScreenCarousel::-webkit-scrollbar {display: none;}
-.bl_fullScreenCarousel_item {display: flex; flex-direction: column; justify-content: center; align-items: center; flex-shrink: 0; width: 100vw; height: 100vh; padding-bottom: 60px; overflow: hidden; scroll-snap-align: start; scroll-snap-stop:always;}
+.bl_fullScreenCarousel_item {display: flex; flex-direction: column; justify-content: center; align-items: center; flex-shrink: 0; width: 100vw; height: 100vh; padding-bottom: 32px; overflow: hidden; scroll-snap-align: start; scroll-snap-stop:always;}
 .bl_fullScreenCarousel_item.__intro .bl_fullScreenCarousel_panel {gap: 12px;}
 .bl_fullScreenCarousel_item.__intro .bl_fullScreenCarousel_panel_ttl {font-size: 42px; line-height: 48px;}
 .bl_fullScreenCarousel_item.__intro .bl_fullScreenCarousel_panel_img {width: 140px;}
