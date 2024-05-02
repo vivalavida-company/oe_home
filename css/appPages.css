@@ -40,13 +40,13 @@
 .bl_footerBtnSet {display: flex; flex-direction: column; gap: 24px; padding: 60px 16px; background: #F7F8F9;}
 .bl_footerBtnSet_ttl {font-size: 16px; line-height: 24px; color: var(--sys_font_color_main); text-align: center;}
 
-.bl_fullScreenCarousel {box-sizing: content-box; position: relative; display: flex; width: 100vw; height: 100vh; overflow-x: auto; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: normal;}
+.bl_fullScreenCarousel {box-sizing: content-box; position: relative; display: flex; width: 100vw; height: 100vh; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: normal;}
 .bl_fullScreenCarousel::-webkit-scrollbar {display: none;}
 .bl_fullScreenCarousel_item {display: flex; flex-direction: column; justify-content: center; align-items: center; flex-shrink: 0; width: 100vw; height: 100vh; padding-bottom: 32px; overflow: hidden; scroll-snap-align: start; scroll-snap-stop:always;}
 .bl_fullScreenCarousel_item.__intro .bl_fullScreenCarousel_panel {gap: 12px;}
 .bl_fullScreenCarousel_item.__intro .bl_fullScreenCarousel_panel_ttl {font-size: 42px; line-height: 48px;}
 .bl_fullScreenCarousel_item.__intro .bl_fullScreenCarousel_panel_img {width: 140px;}
-.bl_fullScreenCarousel_indicator {position: fixed; bottom: 60px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;}
+.bl_fullScreenCarousel_indicator {position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;}
 .bl_fullScreenCarousel_indicator_item {width: 8px; height: 8px; border-radius: 50%; background: #DCDEE3; transition: 350ms linear;}
 .bl_fullScreenCarousel_indicator_item.__on {background: #565B66;}
 .bl_fullScreenCarousel_panel {position: relative; display: flex; flex-direction: column; align-items: center; gap: 24px;}
@@ -54,7 +54,7 @@
 .bl_fullScreenCarousel_panel_img {width: 360px;}
 .bl_fullScreenCarousel_panel_ps {position: absolute; bottom: 0px; color: var(--sys_font_color_primary);}
 .bl_fullScreenCarousel_panel_btn {display: flex; align-items: center; gap: 12px; height: 60px; padding: 0 24px; border-radius: 16px; background: #26BD72; font-size: 18px; color: #fff;}
-.bl_fullScreenCarousel_mainBtn {position: absolute; bottom: 84px; display: flex; justify-content: center; align-items: center; gap: 4px; width: calc(100% - 32px); height: 60px; border-radius: 16px; border: 0; background: #FEE500; font-size: 18px;}
+.bl_fullScreenCarousel_mainBtn {position: absolute; bottom: 56px; display: flex; justify-content: center; align-items: center; gap: 4px; width: calc(100% - 32px); height: 60px; border-radius: 16px; border: 0; background: #FEE500; font-size: 18px;}
 .bl_fullScreenCarousel_mainBtn p {font-size: #333;}
 /* 모디파이어 */
 .bl_fullScreenCarousel_panel_btn.__am_float {animation: am_float 1550ms infinite;}
