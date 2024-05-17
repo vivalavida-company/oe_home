@@ -1,0 +1,97 @@
+
+:root {
+    --sys_font_color_primary : #00B158;
+    --sys_font_color_main: #31353D;
+    --sys_font_color_sub: #565B66;
+    --sys_font_color_sub2: #828894;
+}
+
+
+.ly_row16 {padding-left: 16px; padding-right: 16px;}
+.ly_col32 {padding-top: 32px; padding-bottom: 32px;}
+.ly_colFlex_gap32 {display: flex; flex-direction: column; gap: 32px;}
+
+
+
+.el_brokenLine_lage {height: 8px; background: #F7F8F9;}
+/* 모디파이어 */
+.el_brokenLine_lage.__respondPad16 {width: 100vw; transform: translateX(-16px);}
+
+.el_brokenLine_small {height: 1px; background: #E8EAED;}
+
+.el_btn_normal_lg {display: flex; justify-content: center; align-items: center; height: 60px; border-radius: 16px; border: 0; font-size: 18px; color: #fff; background: #565B66;}
+
+.el_icSize_24 {display: inline-block; width: 24px; height: 24px;}
+.el_icSize_48 {display: inline-block; width: 48px; height: 48px;}
+
+
+.bl_lightModal {position: absolute; top: 0; left: 0; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 100vw; height: 100vh; padding: 24px 16px; background: rgba(0,0,0,0.6);}
+.bl_lightModal_header {display: flex; justify-content: flex-end; width: 100%;}
+.bl_lightModal_body {display: flex; flex-direction: column; gap: 16px; align-items: center; padding-bottom: 60px;}
+.bl_lightModal_body_img {width: 112px; transform: translateX(16%);}
+.bl_lightModal_body_txt {font-size: 20px; line-height: 120%; color: #fff;}
+
+.bl_desc_ttl {margin-bottom: 8px; font-size: 20px; line-height: 30px; color: var(--sys_font_color_main);}
+.bl_desc_subTtl {margin-bottom: 16px; font-size: 20px; line-height: 30px; font-weight: bold; color: var(--sys_font_color_sub);}
+.bl_desc_txt {font-size: 16px; line-height: 24px; color: var(--sys_font_color_sub2);}
+.bl_desc_list {display: flex; flex-direction: column; gap: 8px; padding-left: 24px; list-style:decimal; list-style-position: outside;}
+.bl_desc_list:not(:last-child):not(:first-child) {margin: 32px 0;}
+
+.bl_footerBtnSet {display: flex; flex-direction: column; gap: 24px; padding: 60px 16px; background: #F7F8F9;}
+.bl_footerBtnSet_ttl {font-size: 16px; line-height: 24px; color: var(--sys_font_color_main); text-align: center;}
+
+.bl_fullScreenCarousel {box-sizing: content-box; position: relative; display: flex; width: 100vw; height: 100vh; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scroll-behavior: normal;}
+.bl_fullScreenCarousel::-webkit-scrollbar {display: none;}
+.bl_fullScreenCarousel_item {display: flex; flex-direction: column; justify-content: center; align-items: center; flex-shrink: 0; width: 100vw; height: 100vh; padding-bottom: 32px; overflow: hidden; scroll-snap-align: start; scroll-snap-stop:always;}
+.bl_fullScreenCarousel_item.__intro .bl_fullScreenCarousel_panel {gap: 12px;}
+.bl_fullScreenCarousel_item.__intro .bl_fullScreenCarousel_panel_ttl {font-size: 42px; line-height: 48px;}
+.bl_fullScreenCarousel_item.__intro .bl_fullScreenCarousel_panel_img {width: 140px;}
+.bl_fullScreenCarousel_indicator {position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;}
+.bl_fullScreenCarousel_indicator_item {width: 8px; height: 8px; border-radius: 50%; background: #DCDEE3; transition: 350ms linear;}
+.bl_fullScreenCarousel_indicator_item.__on {background: #565B66;}
+.bl_fullScreenCarousel_panel {position: relative; display: flex; flex-direction: column; align-items: center; gap: 24px;}
+.bl_fullScreenCarousel_panel_ttl {font-size: 24px; line-height: 34px; font-weight: bold; color: var(--sys_font_color_main); text-align: center; letter-spacing: 0;}
+.bl_fullScreenCarousel_panel_img {width: 360px;}
+.bl_fullScreenCarousel_panel_ps {position: absolute; bottom: 0px; color: var(--sys_font_color_primary);}
+.bl_fullScreenCarousel_panel_btn {display: flex; align-items: center; gap: 12px; height: 60px; padding: 0 24px; border-radius: 16px; background: #26BD72; font-size: 18px; color: #fff;}
+.bl_fullScreenCarousel_mainBtn {position: absolute; bottom: 56px; display: flex; justify-content: center; align-items: center; gap: 4px; width: calc(100% - 32px); height: 60px; border-radius: 16px; border: 0; background: #FEE500; font-size: 18px;}
+.bl_fullScreenCarousel_mainBtn p {font-size: #333;}
+/* 모디파이어 */
+.bl_fullScreenCarousel_panel_btn.__am_float {animation: am_float 1550ms infinite;}
+.bl_fullScreenCarousel_panel_btn i {display: inline-block; width: 16px; height: 16px;}
+@keyframes am_float {
+    0% {transform: translateY(0); animation-timing-function: ease-out;}
+    35% {transform: translateY(-4px); animation-timing-function: ease-out;}
+    100% {transform: translateY(0); animation-timing-function: ease-out;}
+}
+
+.bl_menuList {display: flex; flex-direction: column; width: calc(100vw - 48px); padding: 16px; background: #fff; border-radius: 32px;}
+.bl_menuList_item {display: flex; justify-content: space-between; align-items: center; padding: 0 8px; height: 75px; border-bottom: 1px solid #E8EAED;}
+.bl_menuList_item:last-child {border: 0;}
+.bl_menuList_item p {font-size: 18px; line-height: 24px; font-weight: bold; }
+
+
+
+.hp_colorGreen {color: #00B158 !important;}
+.hp_colorBlue {color: #0088FF !important;}
+.hp_colorPurple {color: #7000FF !important;}
+.hp_bgLightGray {background: #f7f8f9 !important;}
+
+
+.ic_fillArrow {background: url(/appPages/images/ic_fillArrow.svg) center / cover;}
+.ic_lineArrow_right_white {background: url(/appPages/images/ic_lineArrow_right_white.svg) center / cover;}
+.ic_cancel_lightGray {background: url(/appPages/images/ic_cancel_lightGray.svg) center / cover;}
+.ic_kakao_chat {background: url(/appPages/images/ic_kakao_chat.svg) center / cover !important;}
+
+
+
+.un_memberBadge_thumbnail {margin-top: 16px; padding-bottom: 65%; background: url(/images/appPages/il_memberBadge_thumbnail.png) center / cover;}
+
+.un_putBadge {display: flex; align-items: center; gap: 8px;}
+.un_putBadge::after {content: ''; display: inline-block; width: 24px; height: 24px;}
+/* 모디파이어 */
+.un_putBadge.__dotCrown::after {background: url(/images/appPages/il_dotCrownBadge.png) center / cover; }
+.un_putBadge.__crown::after {background: url(/images/appPages/il_crownBadge.png) center / cover; }
+.un_putBadge.__star::after {background: url(/images/appPages/il_starBadge.png) center / cover; }
+
+.js_fullScreenCarousel {overflow-x: hidden;}

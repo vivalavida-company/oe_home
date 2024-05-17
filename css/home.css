@@ -56,12 +56,15 @@
 }
 .ic_group_bg {
   background-color: #f7f7fb;
-  width: 28px;
-  height: 28px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.ic_group_bg.kakao {
+ background: #FAE407;
 }
 .ic_group_bg img {
   max-width: 100%;
@@ -698,6 +701,13 @@
   }
   .header .header_left h2 {
     font-size: 20px;
+  }
+  .header_right {
+    gap: 0px;
+  }
+  .ic_group_bg {
+    width: 26px;
+    height: 26px;
   }
   .main_banner_wrapper {
     width: 100%;
