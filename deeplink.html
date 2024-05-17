@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OE-DEEP</title>
     <style>
-        body {display: flex; flex-direction: column; justify-content: center; align-items: center; width: 100vw; height: 100vh; padding: 0; margin: 0;}
-        img {width: 154px; height: 154px; transform: translateY(-24px);}
-        button {height: 48px; font-size: 15px; padding: 0 48px; background: #333; color: #fff; margin-top: 20px; border-radius: 5px; transform: translateY(-24px);}
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+      }
+      img {
+        width: 154px;
+        height: 154px;
+        transform: translateY(-24px);
+      }
+      button {
+        height: 48px;
+        font-size: 15px;
+        padding: 0 48px;
+        background: #333;
+        color: #fff;
+        margin-top: 20px;
+        border-radius: 5px;
+        transform: translateY(-24px);
+      }
     </style>
-</head>
-<body>
-
-    <img src="/images/il_logo_oe.svg">
+  </head>
+  <body>
+    <img src="/images/il_logo_oe.svg" />
     <button id="oi">오이 앱으로 이동하기</button>
 
     <script>
-        const oiBtn = document.querySelector('#oi')
-        oiBtn.addEventListener('click', () => {
-            location.href = `intent://action#Intent;scheme=oeapp;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.koco.oi_android;end`
-        })
-        
-        const deepQuery = window.location.search
-        const urlParams = new URLSearchParams(deepQuery)
+      const oiBtn = document.querySelector("#oi");
+      oiBtn.addEventListener("click", () => {
+        location.href = `intent://action?#Intent;scheme=oeapp;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.koco.oi_android;end`;
+      });
 
-        if(urlParams.has('scheme')) {
-            console.log('너 타는거 아니잖아')
-            const scheme = urlParams.get('scheme')
-            location.href = `intent://action?scheme=${scheme}#Intent;scheme=oeapp;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.koco.oi_android;end`
+      const deepQuery = window.location.search;
+      const urlParams = new URLSearchParams(deepQuery);
+
+      if (urlParams.has("scheme")) {
+        const scheme = urlParams.get("scheme");
+        if (scheme.startsWith("oeapp")) {
+          location.href = scheme;
         } else {
-            console.log('너여야 맞지')
-            location.href = `intent://action#Intent;scheme=oeapp;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.koco.oi_android;end`
+          location.href = `intent://action?scheme=${scheme}#Intent;scheme=oeapp;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.koco.oi_android;end`;
         }
-
+      } else {
+        location.href = `intent://action?#Intent;scheme=oeapp;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.koco.oi_android;end`;
+      }
     </script>
-</body>
+  </body>
 </html>
