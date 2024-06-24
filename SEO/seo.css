@@ -115,6 +115,9 @@ body {background: #fff;}
 .un_gh_noticeCont_carousel::after {content: ''; flex-shrink: 0; display: inline-block; width: 8px; height: 1px;}
 .un_gh_noticeCont_carousel_item {position: relative; flex-shrink: 0; width: 100%; padding-top:100%; border-radius: 32px; overflow: hidden;}
 .un_gh_noticeCont_carousel_item img {position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center;}
+.un_gh_noticeCont_carousel_indicator {display: flex; gap: 4px; justify-content: center; align-items: center; margin-top: 16px;}
+.un_gh_noticeCont_carousel_indicator i {width: 16px; height: 3px; background: #DCDEE3; border-radius: 100px}
+.un_gh_noticeCont_carousel_indicator i.--focus {background: #31353D;} 
 
 
 
@@ -155,7 +158,8 @@ body {background: #fff;}
 .un_gh_feedCont_carousel_itemInner::after {content: ''; display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.5) 100%);}
 .un_gh_feedCont_carousel_item {flex-shrink: 0;  width: 100%;}
 .un_gh_feedCont_carousel_item img {position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center;}
-.un_gh_feedCont_carousel_item_contWrapper {position: absolute; top: 0; left: 0; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; height: 100%; padding: 20px;}
+.un_gh_feedCont_carousel_item_contWrapper {position: absolute; top: 0; left: 0; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; width: 100%; height: 100%; padding: 20px;}
+.un_gh_feedCont_carousel_item_contWrapper.__blur {backdrop-filter: blur(3vw);}
 .un_gh_feedCont_carousel_item_contWrapper:first-child .un_gh_feedCont_carousel_item_txt {visibility: visible;}
 .un_gh_feedCont_carousel_item_label {display: flex; flex-wrap: wrap; gap: 8px;}
 .un_gh_feedCont_carousel_item_label span {background: #31353D; color: #fff; padding: 4px 10px; font-size: 14px; line-height: 20px; border-radius: 20px;}
